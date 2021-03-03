@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Cuet Cafe</string>
+    <string-array name="payment">
+        <item>Bkash</item>
+        <item>Rocket</item>
+        <item>Cash On</item>
+    </string-array>
+    <string-array name="foodname">
+        <item>Birani</item>
+        <item>Tehri</item>
+        <item>Kacchi</item>
+        <item>Halem</item>
+        <item>Vuna Khicuri</item>
+        <item>Sheek Kabab</item>
+        <item>Parata</item>
+        <item>Grill</item>
+        <item>Morog Polao</item>
+        <item>Sada Vat</item>
+        <item>Singra</item>
+        <item>Somuca</item>
+    </string-array>
+</resources>

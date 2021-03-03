@@ -1,0 +1,127 @@
+{
+  "project_info": {
+    "project_number": "293015559982",
+    "firebase_url": "https://physics-51121.firebaseio.com",
+    "project_id": "physics-51121",
+    "storage_bucket": "physics-51121.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:293015559982:android:9c98dc731036e84f6524bf",
+        "android_client_info": {
+          "package_name": "com.bdlabit.shaqib.cuetresturent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "293015559982-lcp9mmsveeu1u635ueng526mretdqpdp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcFeDriW6v36Z74w-my5iOazotCHRgurs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "293015559982-lcp9mmsveeu1u635ueng526mretdqpdp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:293015559982:android:1466b103bcba984c6524bf",
+        "android_client_info": {
+          "package_name": "com.example.cuetcafe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "293015559982-lcp9mmsveeu1u635ueng526mretdqpdp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcFeDriW6v36Z74w-my5iOazotCHRgurs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "293015559982-lcp9mmsveeu1u635ueng526mretdqpdp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:293015559982:android:13c3c6a65bcbec53",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "293015559982-lcp9mmsveeu1u635ueng526mretdqpdp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcFeDriW6v36Z74w-my5iOazotCHRgurs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "293015559982-lcp9mmsveeu1u635ueng526mretdqpdp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:293015559982:android:fc3741ba94d7d1b16524bf",
+        "android_client_info": {
+          "package_name": "com.sbiitju.ttest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "293015559982-lcp9mmsveeu1u635ueng526mretdqpdp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcFeDriW6v36Z74w-my5iOazotCHRgurs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "293015559982-lcp9mmsveeu1u635ueng526mretdqpdp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#65DD2C00"
+    tools:context=".Starting">
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="339dp"
+        android:gravity="center">
+        <ProgressBar
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:outlineAmbientShadowColor="#D50000"
+            style="@style/Widget.MaterialComponents.Snackbar"
+
+            android:id="@+id/progress"/>
+    </LinearLayout>
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@drawable/cuetlogo"
+        android:layout_marginTop="20dp"
+        />
+
+</LinearLayout>
