@@ -9,7 +9,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -97,18 +99,12 @@ public class LoginActivity extends AppCompatActivity {
         }
         else {
             signup.setOnClickListener(new View.OnClickListener() {
+                @RequiresApi(api = Build.VERSION_CODES.GINGERBREAD)
                 @Override
                 public void onClick(View v) {
                     e=email.getText().toString();
                     p=pass.getText().toString();
-                    if(e.isEmpty()){
-                        email.setError("Invalid!!");
-                    }
-                    if(p.isEmpty()){
-                        pass.setError("Input Here!!");
-                    }
-
-                    else{
+                    if(e.substring(9).equals("student.cuet.ac.bd")){
                         final ProgressDialog dialog = new ProgressDialog(LoginActivity.this);
                         dialog.setMessage("Creating an Account..");
                         dialog.show();
@@ -134,6 +130,11 @@ public class LoginActivity extends AppCompatActivity {
                                 }
                             }
                         });
+
+                    }
+                    else{
+                        email.setError("Invalid!!");
+                        pass.setError("Input Here!!");
                     }
                 }
             });
@@ -142,14 +143,7 @@ public class LoginActivity extends AppCompatActivity {
                 public void onClick(View v) {
                     e=email.getText().toString();
                     p=pass.getText().toString();
-                    if(e.isEmpty()){
-                        email.setError("Invalid!!");
-                    }
-                    if(p.isEmpty()){
-                        pass.setError("Input Here!!");
-                    }
-
-                    else{
+                    if(e.substring(9).equals("student.cuet.ac.bd")){
                         final ProgressDialog dialog = new ProgressDialog(LoginActivity.this);
                         dialog.setMessage("Verifying to Sign In..");
                         dialog.show();
@@ -168,6 +162,11 @@ public class LoginActivity extends AppCompatActivity {
 
                             }
                         });
+                    }
+                    else{
+                        pass.setError("Input Here!!");
+                        email.setError("Invalid!!");
+
                     }
                 }
             });

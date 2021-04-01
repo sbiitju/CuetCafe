@@ -58,12 +58,31 @@ public class MainActivity extends AppCompatActivity {
         progressDialog.show();
         progressDialog.setCancelable(false);
         recyclerView=findViewById(R.id.recyclerview);
-        arrayList=new ArrayList<>();
+        arrayList=new ArrayList<>();   
         firebaseAuth=FirebaseAuth.getInstance();
 //        Data data4=new Data("Shahin Bashar","https://i.imgur.com/jDr4GqN.jpg","100","It's very delicious","50");
 //        Data data3=new Data("Shahin Bashar","https://i.imgur.com/jDr4GqN.jpg","100","It's very delicious","50");
 //        arrayList.add(data4);
 //        arrayList.add(data3);
+        DatabaseReference databaseReference1=FirebaseDatabase.getInstance().getReference("mode");
+        databaseReference1.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String s=snapshot.getValue().toString();
+                if(s.equals("0")){
+                    startActivity(new Intent(MainActivity.this,Check.class));
+                    finish();
+                }
+                else {
+                    Toast.makeText(MainActivity.this, "Welcome", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
         DatabaseReference databaseReference= FirebaseDatabase.getInstance().getReference("FoodList");
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -210,7 +229,11 @@ public class MainActivity extends AppCompatActivity {
                         p=paymenttype.getSelectedItem().toString();
                         if(p.equals("Bkash")){
                             Toast.makeText(MainActivity.this, "It's under processing.", Toast.LENGTH_SHORT).show();
-                        }else {
+                        }
+                        else if(p.equals("Rocket")){
+                            Toast.makeText(MainActivity.this, "It's under processing.", Toast.LENGTH_SHORT).show();
+                        }
+                        else {
                             ProgressDialog progressDialog= new ProgressDialog(MainActivity.this);
                             progressDialog.show();
                             DatabaseReference databaseReference=FirebaseDatabase.getInstance().getReference("Order");
@@ -229,7 +252,7 @@ public class MainActivity extends AppCompatActivity {
                                        @Override
                                        public void onTick(long millisUntilFinished) {
                                            String v=firebaseAuth.getUid();
-                builder.setMessage("Your Order is Submitted and It'll will be completed around "+orderstatus+" Minutes after submission\nThank You.").show();
+                                           Toast.makeText(MainActivity.this, "Your Order is Submitted and It'll will be completed around "+orderstatus+" Minutes after submission\nThank You.", Toast.LENGTH_SHORT).show();
                                            progressDialog.setMessage("Your Order is Successfully submitted.\nYour Token Number is "+v.substring(v.length()-4,v.length())+"\nYour Delivary will be completed within "+value+" minutes from your order time.\nThank you");
                                            if(millisUntilFinished/1000==0){
                                            startActivity(new Intent(MainActivity.this,MainActivity.class));
