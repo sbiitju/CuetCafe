@@ -14,7 +14,8 @@
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="#EA0606"
-        android:text="The Cafe is now closed.\nPlease wait or try again later.">
+        android:text="You are not eligible for this right now
+Please use cuet mail to get access">
 
     </TextView>
 

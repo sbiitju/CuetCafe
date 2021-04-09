@@ -104,7 +104,7 @@ public class LoginActivity extends AppCompatActivity {
                 public void onClick(View v) {
                     e=email.getText().toString();
                     p=pass.getText().toString();
-                    if(e.substring(9).equals("student.cuet.ac.bd")){
+                    if(e.length()!=0){
                         final ProgressDialog dialog = new ProgressDialog(LoginActivity.this);
                         dialog.setMessage("Creating an Account..");
                         dialog.show();
@@ -143,7 +143,7 @@ public class LoginActivity extends AppCompatActivity {
                 public void onClick(View v) {
                     e=email.getText().toString();
                     p=pass.getText().toString();
-                    if(e.substring(9).equals("student.cuet.ac.bd")){
+                    if(e.length()!=0){
                         final ProgressDialog dialog = new ProgressDialog(LoginActivity.this);
                         dialog.setMessage("Verifying to Sign In..");
                         dialog.show();

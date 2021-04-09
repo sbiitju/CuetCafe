@@ -69,12 +69,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 String s=snapshot.getValue().toString();
-                if(s.equals("0")){
-                    startActivity(new Intent(MainActivity.this,Check.class));
-                    finish();
+                String e=firebaseAuth.getCurrentUser().getEmail();
+                if(s.equals("1")&&e.substring(9).equals("student.cuet.ac.bd")){
+                    Toast.makeText(MainActivity.this, "Welcome", Toast.LENGTH_SHORT).show();
+                }
+                else if(s.equals("0")){
+                    Toast.makeText(MainActivity.this, "Welcome", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    Toast.makeText(MainActivity.this, "Welcome", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(MainActivity.this,Check.class));
+                    finish();
                 }
             }
 
@@ -196,7 +200,6 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
             }
         });
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
